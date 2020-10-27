@@ -15,5 +15,17 @@ public class ProfileTest {
         login.setEnterPassword("parolj9090");
         login.setEnterProfilePage();
         profile.setMyProfile();
+        profile.setMyName("Pasha");
+        profile.setMyLastname("Technik");
+        profile.selectBirthDay("13");
+        profile.selectBirthMonth("5");
+        profile.selectBirthYear("1988");
+        profile.setPhoneNumber("29123355");
+        profile.ScrollPage();
+        profile.setHomeCity("Gotham");
+        profile.selectUserGender();
+        profile.selectUserLanguage("1000");
+        profile.setSubmitChanges();
+
     }
 }
