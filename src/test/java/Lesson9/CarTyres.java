@@ -29,8 +29,21 @@ public class CarTyres {
         driver.findElements(By.xpath("//div[@class='menu filters-block-list']")).get(2).click();
         driver.findElement(By.xpath("//li[@data-value='7130455']")).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,800)");
-      //  driver.findElements(By.xpath("//li[@class='order-up']")).get(20).click();
-        driver.findElement(By.xpath("//div[@id='filterCount7815037']"));
+        js.executeScript("window.scrollBy(0,1100)");
+       driver.findElement(By.xpath("//input[@name='filter_search']")).sendKeys("Bridgestone");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.xpath("//ul[@class='menu filters-group']/li[6]/ul[1]/li[23]")).click();
+        driver.findElement(By.xpath("//div[@class='site-center']/section[3]/div[1]/div[1]/div[2]/section[1]/div[7]/div[1]/div[11]")).click();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.xpath("//div[@class='site-center']/section[3]/div[1]/div[1]/div[2]/section[1]/div[7]/div[1]/div[11]/div[1]/div[1]/a[3]")).click();
     }
 }
