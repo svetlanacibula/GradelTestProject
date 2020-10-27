@@ -17,7 +17,7 @@ public class CarTyres {
         driver.get("https://220.lv/lv/");
         driver.findElement(By.xpath("//li[@id='department-4579']")).click();
         driver.findElements(By.xpath("//div[@class='image-wrap']")).get(1).click();
-        if(driver.getTitle().contains("PLAŠĀKAIS AUTO PREČU KLĀSTS ! IENĀC INTERNETA VEIKALĀ 220.LV ! | 220.lv"))
+        if (driver.getTitle().contains("PLAŠĀKAIS AUTO PREČU KLĀSTS ! IENĀC INTERNETA VEIKALĀ 220.LV ! | 220.lv"))
             //Pass
             System.out.println("Page title contains \"PLAŠĀKAIS AUTO PREČU KLĀSTS ! IENĀC INTERNETA VEIKALĀ 220.LV ! | 220.lv\" ");
         else
@@ -30,7 +30,7 @@ public class CarTyres {
         driver.findElement(By.xpath("//li[@data-value='7130455']")).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1100)");
-       driver.findElement(By.xpath("//input[@name='filter_search']")).sendKeys("Bridgestone");
+        driver.findElement(By.xpath("//input[@name='filter_search']")).sendKeys("Bridgestone");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
