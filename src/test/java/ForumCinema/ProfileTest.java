@@ -15,17 +15,23 @@ public class ProfileTest {
         login.setEnterPassword("parolj9090");
         login.setEnterProfilePage();
         profile.setMyProfile();
-        profile.setMyName("Pasha");
-        profile.setMyLastname("Technik");
+        profile.setMyName("PashaQ");
+        profile.setMyLastname("TechnikQ");
         profile.selectBirthDay("13");
         profile.selectBirthMonth("5");
         profile.selectBirthYear("1988");
         profile.setPhoneNumber("29123355");
         profile.ScrollPage();
-        profile.setHomeCity("Gotham");
+        profile.setHomeCity("GothamQ");
         profile.selectUserGender();
         profile.selectUserLanguage("1000");
         profile.setSubmitChanges();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        profile.setValidateChanges("Paldies, izmaiņas Jūsu reģistrācijas formā ir saglabātas.");
 
     }
 }
