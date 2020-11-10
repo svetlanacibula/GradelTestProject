@@ -2,8 +2,8 @@ package Lesson11.pages;
 
 import Lesson11.Common;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ShopperPage extends Common {
     private By searchFor = By.xpath("//input[@id='search']");
@@ -21,6 +21,7 @@ public class ShopperPage extends Common {
     private By addressElement = By.id("billing:street1");
     private By postcodeElement = By.id("billing:postcode");
 
+
     public void fillInShopperData(String firstname, String lastname, String email, String phone, String address, String postcode) {
         driver.findElement(firstnameElement).sendKeys(firstname);
         driver.findElement(lastnameElement).sendKeys(lastname);
@@ -30,33 +31,43 @@ public class ShopperPage extends Common {
         driver.findElement(postcodeElement).sendKeys(postcode);
     }
 
-    public void setSearchFor (String search) {
-        driver.findElement(searchFor).sendKeys(search);
+    public void setSearchFor(String search) { driver.findElement(searchFor).sendKeys(search); }
 
-    }
-    public void setSubmitSearch () {
+    public void setSubmitSearch() {
         driver.findElement(submitSearch).click();
     }
-    public void setChooseProduct () {
+
+    public void setChooseProduct() {
         driver.findElement(chooseProduct).click();
     }
-    public void setAddToBasket () {
+
+    public void setAddToBasket() {
         driver.findElement(addToBasket).click();
     }
-    public void setGoToBasket () {
+
+    public void setGoToBasket() {
         driver.findElement(goToBasket).click();
     }
+
     public void selectChoosePakomat(String pakomat) {
         Select selectChoosePakomat = new Select(driver.findElement(choosePakomat));
         selectChoosePakomat.selectByValue(pakomat);
     }
-    public void setPaymentMethod () {
+
+    public void setPaymentMethod() {
         driver.findElement(paymentMethod).click();
     }
-    public void setAddCoupon (String coupon) {
-       driver.findElement(addCoupon).sendKeys(coupon);
+
+    public void setAddCoupon(String coupon) {
+        driver.findElement(addCoupon).sendKeys(coupon);
     }
 
+    public void setValidateTitle() {
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Figūra Strech Superman 25 cm";
+        assertThat(actualTitle).isEqualTo(expectedTitle);
+
+    }
 
 
 }

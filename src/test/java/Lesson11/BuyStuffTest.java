@@ -1,8 +1,6 @@
 package Lesson11;
 
 import Lesson11.models.ShopperModel;
-import Lesson11.pages.HomePage;
-import Lesson11.pages.LoginPage;
 import Lesson11.pages.ShopperPage;
 import org.junit.Test;
 
@@ -22,6 +20,7 @@ public class BuyStuffTest {
             e.printStackTrace();
         }
         shopperPage.setChooseProduct();
+        shopperPage.setValidateTitle();
         shopperPage.setAddToBasket();
         shopperPage.setGoToBasket();
 
